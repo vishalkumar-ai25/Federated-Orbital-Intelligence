@@ -172,7 +172,7 @@ Verify: Python agent receives observations and sends NOP actions back; sim compl
 ---
 
 ## Slice S13 — Documentation
-`[ ]`
+`[x]`
 **Deliverables:**
 - `README.md` (build, run, Python usage, attribute table)
 - `doc/architecture.md`
