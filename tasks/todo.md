@@ -113,7 +113,7 @@
 ---
 
 ## Slice S09 — SocketIpcAdapter (IPC layer)
-`[ ]`
+`[x]`
 **Deliverables:**
 - `model/ipc-adapter.h` — abstract `IpcAdapter`
 - `model/socket-ipc-adapter.h` + `.cc` — TCP loopback, JSON encode/decode, `poll()` timeout
