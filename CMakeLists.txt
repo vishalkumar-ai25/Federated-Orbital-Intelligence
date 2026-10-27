@@ -9,11 +9,15 @@ build_lib(
         model/futurenet-agent-types.cc
         model/observation-provider.cc
         model/action-handler.cc
+        model/action-validator.cc
     HEADER_FILES
         model/futurenet-agent-types.h
         model/observation-provider.h
         model/action-handler.h
+        model/action-validator.h
     LIBRARIES_TO_LINK
         ${libcore}
         ${libnetwork}
+    TEST_SOURCES
+        test/futurenet-agent-test.cc
 )

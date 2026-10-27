@@ -50,7 +50,7 @@
 ---
 
 ## Slice S04 — ActionValidator + T02 (invalid action type)
-`[ ]`
+`[x]`
 **TDD cycle:**
 1. Write `T02` (RED): validator rejects unknown `AgentActionType` value → `./test.py` must FAIL
 2. Implement `model/action-validator.h` + `.cc` with type check only
@@ -61,7 +61,7 @@
 ---
 
 ## Slice S05 — ActionValidator + T03 (stale node ID)
-`[ ]`
+`[x]`
 **TDD cycle:**
 1. Write `T03` (RED): validator rejects node ID not in known-nodes set → FAIL
 2. Extend `ActionValidator` with node-ID check
@@ -72,7 +72,7 @@
 ---
 
 ## Slice S06 — ActionValidator + T04 (NaN payload)
-`[ ]`
+`[x]`
 **TDD cycle:**
 1. Write `T04` (RED): validator rejects `NaN` in `AgentAction::value` → FAIL
 2. Extend `ActionValidator` with NaN check
