@@ -27,7 +27,7 @@
 ---
 
 ## Slice S02 — Types header
-`[ ]`
+`[x]`
 **Deliverables:**
 - `model/futurenet-agent-types.h` — `AgentActionType` enum, `AgentObservation`, `AgentAction`, `NetworkState`, `LinkState`, `ValidationResult`, `ActionResult`
 
@@ -38,7 +38,7 @@
 ---
 
 ## Slice S03 — Abstract interfaces
-`[ ]`
+`[x]`
 **Deliverables:**
 - `model/observation-provider.h` + `.cc` — pure abstract `ObservationProvider`
 - `model/action-handler.h` + `.cc` — pure abstract `ActionHandler`
