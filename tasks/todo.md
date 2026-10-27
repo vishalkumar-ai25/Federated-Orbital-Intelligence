@@ -145,7 +145,7 @@ Verify: Python agent receives observations and sends NOP actions back; sim compl
 ---
 
 ## Slice S11 — Example: mock-control
-`[ ]`
+`[x]`
 **Deliverables:**
 - `examples/futurenet-agent-mock-control.cc`
   - 30 MockProvider entities, MockHandler, 40 s sim
