@@ -11,3 +11,15 @@ build_lib_example(
         ${libcore}
         ${libnetwork}
 )
+
+build_lib_example(
+    NAME futurenet-agent-network-control
+    SOURCE_FILES futurenet-agent-network-control.cc
+    LIBRARIES_TO_LINK
+        ${libfuturenet-agent}
+        ${libcore}
+        ${libnetwork}
+        ${libinternet}
+        ${libpoint-to-point}
+        ${libapplications}
+)

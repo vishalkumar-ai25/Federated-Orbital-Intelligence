@@ -160,7 +160,7 @@ Verify: Python agent receives observations and sends NOP actions back; sim compl
 ---
 
 ## Slice S12 — Example: network-control (real routing)
-`[ ]`
+`[x]`
 **Deliverables:**
 - `examples/futurenet-agent-network-control.cc`
   - Real `Ipv4StaticRouting` reroute on link failure at t=15 s
