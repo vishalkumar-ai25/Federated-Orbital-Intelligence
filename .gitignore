@@ -1,0 +1,25 @@
+# Build artifacts and caches
+build/
+cmake-cache/
+*.o
+*.dylib
+*.so
+*.a
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# Simulation outputs and logs
+*.csv
+*.log
+*.pcap
+*.tr
+
+# OS / Editor artifacts
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
