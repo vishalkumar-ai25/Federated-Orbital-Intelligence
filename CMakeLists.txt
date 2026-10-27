@@ -11,12 +11,16 @@ build_lib(
         model/action-handler.cc
         model/action-validator.cc
         model/action-executor.cc
+        model/ipc-adapter.cc
+        model/agent-interface.cc
     HEADER_FILES
         model/futurenet-agent-types.h
         model/observation-provider.h
         model/action-handler.h
         model/action-validator.h
         model/action-executor.h
+        model/ipc-adapter.h
+        model/agent-interface.h
     LIBRARIES_TO_LINK
         ${libcore}
         ${libnetwork}

@@ -94,7 +94,7 @@
 ---
 
 ## Slice S08 — AgentInterface skeleton + T01 + T06
-`[ ]`
+`[x]`
 **Deliverables:**
 - `model/agent-interface.h` + `.cc`:
   - 13 Attributes (StepInterval, Port, MaxSteps, …)
