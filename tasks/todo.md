@@ -133,7 +133,7 @@ Verify: Python agent receives observations and sends NOP actions back; sim compl
 ---
 
 ## Slice S10 — AgentControlHelper + CSV tracing
-`[ ]`
+`[x]`
 **Deliverables:**
 - `helper/agent-control-helper.h` + `.cc`
   - `Install(NodeContainer)` → creates and configures `AgentInterface`

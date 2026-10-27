@@ -14,6 +14,7 @@ build_lib(
         model/ipc-adapter.cc
         model/socket-ipc-adapter.cc
         model/agent-interface.cc
+        helper/agent-control-helper.cc
     HEADER_FILES
         model/futurenet-agent-types.h
         model/observation-provider.h
@@ -23,9 +24,11 @@ build_lib(
         model/ipc-adapter.h
         model/socket-ipc-adapter.h
         model/agent-interface.h
+        helper/agent-control-helper.h
     LIBRARIES_TO_LINK
         ${libcore}
         ${libnetwork}
+        ${libinternet}
     TEST_SOURCES
         test/futurenet-agent-test.cc
 )
