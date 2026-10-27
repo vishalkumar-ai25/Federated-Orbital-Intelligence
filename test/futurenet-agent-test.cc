@@ -3,9 +3,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * M10: Automated unit tests for ActionValidator (T02, T03, T04).
+ * M10: Automated unit tests for ActionValidator and ActionExecutor (T02, T03, T04, T05).
  */
 
+#include "ns3/action-executor.h"
 #include "ns3/action-handler.h"
 #include "ns3/action-validator.h"
 #include "ns3/futurenet-agent-types.h"
@@ -148,6 +149,35 @@ public:
     }
 };
 
+// T05: Valid Action Reaches ActionHandler via ActionExecutor
+class FutureNetAgentT05ValidActionDispatchTest : public TestCase
+{
+public:
+    FutureNetAgentT05ValidActionDispatchTest()
+        : TestCase("T05: Valid action reaches registered ActionHandler via ActionExecutor")
+    {
+    }
+
+    void DoRun() override
+    {
+        Ptr<ActionExecutor> executor = CreateObject<ActionExecutor>();
+        Ptr<MockActionHandler> handler = CreateObject<MockActionHandler>();
+        std::vector<Ptr<ActionHandler>> handlers = {handler};
+
+        AgentAction action;
+        action.decisionId = 1;
+        action.type = AgentActionType::SELECT_PATH;
+        action.targetId = 42;
+        action.secondaryTargetId = 7;
+        action.value = 100.0;
+
+        ActionResult res = executor->Execute(action, handlers);
+        NS_TEST_ASSERT_MSG_EQ(res.success, true, "Valid action execution should succeed");
+        NS_TEST_ASSERT_MSG_EQ(handler->m_execCount, 1, "Handler should have been executed once");
+        NS_TEST_ASSERT_MSG_EQ(handler->m_lastAction.targetId, 42, "Target ID must match dispatched action");
+    }
+};
+
 class FutureNetAgentTestSuite : public TestSuite
 {
 public:
@@ -157,6 +187,7 @@ public:
         AddTestCase(new FutureNetAgentT02UnsupportedActionTest, TestCase::Duration::QUICK);
         AddTestCase(new FutureNetAgentT03StaleDecisionIdTest, TestCase::Duration::QUICK);
         AddTestCase(new FutureNetAgentT04ValidationSanityTest, TestCase::Duration::QUICK);
+        AddTestCase(new FutureNetAgentT05ValidActionDispatchTest, TestCase::Duration::QUICK);
     }
 };
 

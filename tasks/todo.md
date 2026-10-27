@@ -83,7 +83,7 @@
 ---
 
 ## Slice S07 — ActionExecutor + T05 (fan-out dispatch)
-`[ ]`
+`[x]`
 **TDD cycle:**
 1. Write `T05` (RED): executor with two mock handlers — both receive the action → FAIL
 2. Implement `model/action-executor.h` + `.cc`
